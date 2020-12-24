@@ -1,5 +1,6 @@
 package org.neoa.ch01.a_Fibonacci_Sequence;
 
+import org.approvaltests.Approvals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -38,10 +39,10 @@ public class FibonacciTest {
 
     @Test
     void fibonacciReturnsExpectedSequenceWhenIndexIsGreaterThanTwo() {
-        for (int i = 0; i < 5; i++)
+        int n = 50;
+        for (int i = 0; i < n; i++)
             sequence.add(fibonacci(i));
 
-        assertThat(sequence)
-                .containsExactlyInAnyOrder(0,1, 1, 2, 3);
+        Approvals.verify(sequence);
     }
 }
