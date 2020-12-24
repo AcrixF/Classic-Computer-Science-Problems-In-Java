@@ -9,7 +9,7 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.neoa.ch01.a_Fibonacci_Sequence.Fibonacci.fibonacci;
 
-public class a_FibonacciTest {
+public class FibonacciTest {
 
     private List<Integer> sequence = null;
 
